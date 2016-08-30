@@ -1,21 +1,23 @@
 import { Component, OnInit } from '@angular/core'
 import { Router } from '@angular/router'
+import { DeveloperService } from '../developer/developer.service'
 
 @Component({
   moduleId: module.id,
   selector: 'developer-list',
-  templateUrl: 'developer-list.component.html'
+  templateUrl: 'developer-list.component.html',
+  providers: [DeveloperService]
 })
 export class DeveloperListComponent {
 
-  developers: any [] = [
-    { id: '1', name: 'Robert Gill', xp: '1000', level: 'Code Monkey Grand Master' },
-    { id: '2', name: 'James Neal', xp: '800', level: 'Senior Code Monkey' },
-    { id: '3', name: 'Matthew Baylon', xp: '400', level: 'Code Monkey' },
-    { id: '4', name: 'Steve Tsang', xp: '0', level: 'Baby Code Monkey' }
-  ]
+  developers: any []
 
-  constructor(private router: Router) {  }
+  constructor(private router: Router, private developerService: DeveloperService) {  }
+
+  ngOnInit() {
+    this.developerService.developerList()
+      .subscribe(d => this.developers = d)
+  }
 
   click(dev) {
     this.router.navigate(['/developer', dev.id]);

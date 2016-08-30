@@ -1,19 +1,21 @@
 var express = require('express')
 var bodyParser = require('body-parser')
+var cors = require('cors')
 
 var app = express()
 
 var devs = [
-  { id: '1', name: 'Robert Gill' },
-  { id: '2', name: 'James Neal' },
-  { id: '3', name: 'Reiss Jarvis' },
-  { id: '4', name: 'Matthew Baylon' },
-  { id: '5', name: 'Steve Tsang' },
-  { id: '6', name: 'Kevin Lee' },
-  { id: '7', name: 'Sam Pearsall' },
-  { id: '8', name: 'Craig Mellon' }
+  { id: '1', name: 'Robert Gill', xp: '2000' },
+  { id: '2', name: 'James Neal', xp: '1800' },
+  { id: '3', name: 'Reiss Jarvis', xp: '1700' },
+  { id: '4', name: 'Matthew Baylon', xp: '1600' },
+  { id: '5', name: 'Steve Tsang', xp: '1337' },
+  { id: '6', name: 'Kevin Lee', xp: '1300' },
+  { id: '7', name: 'Sam Pearsall', xp: '1200' },
+  { id: '8', name: 'Craig Mellon', xp: '1100' }
 ]
 
+app.use(cors())
 app.use(bodyParser.json())
 
 app.get('/dev/list', (req, res) => {
@@ -48,4 +50,4 @@ app.post('/dev/:id', (req, res) => {
   res.send('OK')
 })
 
-app.listen(8080)
+app.listen(4300)
