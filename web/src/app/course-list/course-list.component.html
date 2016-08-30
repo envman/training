@@ -1,10 +1,8 @@
-<div *ngFor="let course of courses">
-  <div class="panel panel-default">
-    <div class="panel-heading">
-      <h3 class="panel-title">{{course.name}} - {{course.author}}</h3>
-    </div>
-    <div class="panel-body">
+<ul class="list-group">
+  <li class="list-group-item" *ngFor="let course of courses">
+    <h3>{{course.name}} - {{course.author}}</h3>
+    <div>
       {{course.description}}
     </div>
-  </div>
-</div>
+  </li>
+  <ul>
