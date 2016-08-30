@@ -9,8 +9,10 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "azure-ad-jwt": "^0.2.0",
     "body-parser": "^1.15.2",
     "cors": "^2.8.0",
-    "express": "^4.14.0"
+    "express": "^4.14.0",
+    "express-aad-jwt": "^0.1.2",
   }
 }
