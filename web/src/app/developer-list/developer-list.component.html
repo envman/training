@@ -1,3 +1,17 @@
 <h1>
   YO :D
 </h1>
+
+<ul class="list-group">
+  <li class="list-group-item" *ngFor='let dev of developers'>
+    <img width="100px" height="100px" src="assets/img/placeholder-user.png" />
+    <a (click)='click(dev)'>{{dev.name}}</a>
+    <div>
+      XP: {{dev.xp}}
+    </div>
+    <div>
+        Rank: {{dev.level}}
+    </div>
+
+  </li>
+</ul>
