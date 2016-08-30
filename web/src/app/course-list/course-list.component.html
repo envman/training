@@ -1,8 +1,8 @@
 <ul class="list-group">
-  <li class="list-group-item" *ngFor="let course of courses">
+  <li class="list-group-item" *ngFor="let course of courses" (click)="click(course)">
     <h3>{{course.name}} - {{course.author}}</h3>
     <div>
       {{course.description}}
     </div>
   </li>
-  <ul>
+<ul>
