@@ -1,6 +1,7 @@
 import { provideRouter, RouterConfig } from '@angular/router'
 
-import { CourseListComponent } from './course-list/course-list.component';
+import { CourseListComponent } from './course-list/course-list.component'
+import { DeveloperListComponent } from './developer-list/developer-list.component'
 // import { SurveyComponent } from './+survey/survey.component'
 // import { ImportComponent } from './import/import.component'
 // import { SurveyEditComponent } from './+survey-edit/survey-edit.component'
@@ -11,7 +12,7 @@ import { CourseListComponent } from './course-list/course-list.component';
 export const routes: RouterConfig = [
     { path: '', component: CourseListComponent },
     { path: 'courses', component: CourseListComponent },
-    { path: 'developers', component: CourseListComponent },
+    { path: 'developers', component: DeveloperListComponent },
     // { path: 'survey', component: SurveyComponent },
     { path: '**', redirectTo: '/' }
 ]

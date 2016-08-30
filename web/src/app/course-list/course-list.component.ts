@@ -8,9 +8,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CourseListComponent implements OnInit {
 
-  constructor() {}
+  courses: any
+
+  constructor() { }
 
   ngOnInit() {
+    this.courses = [{
+      name: 'Dependency Injection.... The route of all evil',
+      author: 'James Neal',
+      description: `A wild look into how DI works.... or doesn't`
+    }]
   }
 
 }
