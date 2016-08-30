@@ -6,6 +6,7 @@ import { AdalService } from 'angular2-adal/core'
 import { AdalConfigurationService } from '../app/adal/adal-configuration.service'
 import { DeveloperService } from './developer/developer.service'
 import { DeveloperListComponent } from './developer-list/developer-list.component'
+import { DeveloperComponent } from './developer/developer.component'
 
 @Component({
   moduleId: module.id,
@@ -14,7 +15,7 @@ import { DeveloperListComponent } from './developer-list/developer-list.componen
   styleUrls: ['app.component.css'],
   providers: [DeveloperService],
   directives: [ROUTER_DIRECTIVES, MenuComponent],
-  precompile: [CourseListComponent, DeveloperListComponent]
+  precompile: [CourseListComponent, DeveloperListComponent, DeveloperComponent]
 })
 export class AppComponent {
 
