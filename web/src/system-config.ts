@@ -7,10 +7,16 @@
  **********************************************************************************************/
 /** Map relative paths to URLs. */
 const map: any = {
+  'angular2-adal': 'vendor/angular2-adal',
+  'adal': 'vendor/adal-angular/lib',
+  'angular2-jwt': 'vendor/angular2-jwt',
 };
 
 /** User packages configuration. */
 const packages: any = {
+  'angular2-adal': { main: 'core.js', defaultExtension: 'js' },
+  'adal': { main: 'adal.js', defaultExtension: 'js' },
+  'angular2-jwt': { main: 'angular2-jwt.js', defaultExtension: 'js' },
 };
 
 ////////////////////////////////////////////////////////////////////////////////////////////////
