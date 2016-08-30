@@ -9,5 +9,6 @@ import { CourseListComponent } from './course-list'
   directives: [CourseListComponent]
 })
 export class AppComponent {
-  title = 'app works!';
+  title = 'app works!'
+  
 }
