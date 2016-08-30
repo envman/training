@@ -13,6 +13,15 @@ export class CourseService {
       .map(this.convertData)
   }
 
+  addCourse(name, author, description) {
+    let url = 'http://localhost:4301/course/add'
+    let data = JSON.stringify({name: name, author: author, description: description})
+    let headers = new Headers({ 'Content-Type': 'application/json' })
+    let options = new RequestOptions({ headers: headers });
+
+    return this.authHttp.post(url, data, options)
+  }
+
   convertData(res: Response) {
     let body = res.json()
     return body || { }

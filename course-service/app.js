@@ -2,6 +2,7 @@ let express = require('express')
 let jwt = require('express-aad-jwt')
 let bodyParser = require('body-parser')
 let cors = require('cors')
+let shortid = require('shortid')
 
 let app = express()
 
@@ -18,6 +19,15 @@ let courses = [
 
 app.get('/course/list', (req, res) => {
   res.json(courses)
+})
+
+app.post('/course/add', (req, res) => {
+  var course = req.body
+  course.id = shortid.generate()
+
+  courses.push(course)
+
+  res.send('OK')
 })
 
 app.listen(4301)

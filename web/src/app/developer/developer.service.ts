@@ -13,6 +13,11 @@ export class DeveloperService {
       .map(this.convertData)
   }
 
+  developer(id) {
+    return this.authHttp.get('http://localhost:4300/dev/' + id)
+      .map(this.convertData)
+  }
+
   convertData(res: Response) {
     let body = res.json()
     return body || { }

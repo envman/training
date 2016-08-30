@@ -1,0 +1,22 @@
+<div class="form-group">
+  <label for="name" class="col-md-3 control-label">Course Name</label>
+  <div class="col-md-9">
+    <input type="text" class="form-control" id="name" [(ngModel)]='name' name="name" />
+  </div>
+</div>
+
+<div class="form-group">
+  <label for="author" class="col-md-3 control-label">Author</label>
+  <div class="col-md-9">
+    <input type="text" class="form-control" id="author" [(ngModel)]='author' name="author" />
+  </div>
+</div>
+
+<div class="form-group">
+  <label for="description" class="col-md-3 control-label">Description</label>
+  <div class="col-md-9">
+    <input type="text" class="form-control" id="description" [(ngModel)]='description' name="description" />
+  </div>
+</div>
+
+<button class='btn btn-primary' (click)='addCourse()'>Add Course</button>

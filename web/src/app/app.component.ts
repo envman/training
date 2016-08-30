@@ -7,6 +7,7 @@ import { AdalConfigurationService } from '../app/adal/adal-configuration.service
 import { DeveloperService } from './developer/developer.service'
 import { DeveloperListComponent } from './developer-list/developer-list.component'
 import { DeveloperComponent } from './developer/developer.component'
+import { AdminComponent } from './admin/admin.component'
 
 @Component({
   moduleId: module.id,
@@ -15,7 +16,7 @@ import { DeveloperComponent } from './developer/developer.component'
   styleUrls: ['app.component.css'],
   providers: [DeveloperService],
   directives: [ROUTER_DIRECTIVES, MenuComponent],
-  precompile: [CourseListComponent, DeveloperListComponent, DeveloperComponent]
+  precompile: [CourseListComponent, DeveloperListComponent, DeveloperComponent, AdminComponent]
 })
 export class AppComponent {
 
