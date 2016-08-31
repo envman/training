@@ -6,6 +6,7 @@ import { DeveloperService } from '../developer/developer.service'
   moduleId: module.id,
   selector: 'developer-list',
   templateUrl: 'developer-list.component.html',
+  styleUrls: ['developer-list.component.css'],
   providers: [DeveloperService]
 })
 export class DeveloperListComponent {

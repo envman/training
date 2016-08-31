@@ -1,12 +1,15 @@
 <ul class="list-group">
-  <li class="list-group-item" *ngFor='let dev of developers'>
-    <img width="100px" height="100px" src="assets/img/placeholder-user.png" />
+  <li class="list-group-item dev-row" *ngFor='let dev of developers'>
+    <div class="col-md-2 col-lg-2">
+        <img class="profile-img" width="100px" height="100px" src="assets/img/placeholder-user.png" />
+    </div>
+
     <a (click)='click(dev)'>{{dev.name}}</a>
     <div>
       XP: {{dev.xp}}
     </div>
     <div>
-        Rank: {{dev.level}}
+        Rank: {{dev.rank}}
     </div>
 
   </li>

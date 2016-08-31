@@ -1,10 +1,10 @@
-<div class="container" *ngIf='developer'>
+<!-- <div class="container" *ngIf='developer'>
     <div class="row">
         <div class="col-xs-12 col-sm-6 col-md-6">
             <div class="well well-sm">
                 <div class="row">
                     <div class="col-sm-6 col-md-4">
-                      <img width="100px" height="100px" src="assets/img/placeholder-user.png" />
+                      <img class="profile-img" width="100px" height="100px" src="assets/img/placeholder-user.png" />
                     </div>
                     <div class="col-sm-6 col-md-8">
                         <h4>{{developer.name}}</h4>
@@ -15,4 +15,149 @@
             </div>
         </div>
     </div>
+</div>
+
+<div *ngIf='badges'>
+  <ul class="list-group">
+    <li *ngFor='let badge of badges'>
+      <img height="100px" width="100px" src="/assets/img/git-badge.png"/>
+    </li>
+  </ul>
+</div> -->
+
+<div class='well col-md-6 col-lg-6 col-md-offset-3 col-lg-offset-3' *ngIf='developer'>
+  <!-- <center> -->
+    <div class="col-md-2 col-lg-2" >
+      <img class="profile-img" width="140px" height="140px" src="assets/img/placeholder-user.png" />
+      <div class="rank-label-container">
+          <span class="label label-default rank-label">1200 xp</span>
+      </div>
+    </div>
+
+    <div class="col-md-offset-3 col-lg-offset-3 profile-name" >
+      <h3 class="media-heading">{{developer.name}}  <small>({{developer.rank}})</small></h3>
+
+      <span><strong>4 </strong><small>Courses Completed</small></span>
+    </div>
+
+
+    <!-- <img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcRbezqZpEuwGSvitKy3wrwnth5kysKdRqBW54cAszm_wiutku3R" name="aboutme" width="140" height="140" border="0" class="img-circle"> -->
+
+    <hr />
+    <div>
+      <span><strong>Skills: </strong></span>
+      <span class="label label-warning">Git Basics</span>
+      <span class="label label-warning">C# Basics</span>
+      <span class="label label-info">Git Novice</span>
+      <span class="label label-success">Git Expert</span>
+    </div>
+
+    <div>
+      <span><strong>Exams: </strong></span>
+      <span class="label label-warning">Microsoft: 203 - MVC</span>
+    </div>
+
+    <div>
+      <span><strong>Courses: </strong></span>
+      <span class="label label-warning">Git Basics</span>
+      <span class="label label-info">Git Novice</span>
+      <span class="label label-success">Git Expert</span>
+    </div>
+
+    <div>
+      <span><strong>Tech Talks: </strong></span>
+      <span class="label label-danger">Node.js: introduction</span>
+      <span class="label label-danger">C# 6</span>
+      <span class="label label-danger">SOLID Principles</span>
+    </div>
+  <!-- </center> -->
+  <hr>
+
+  <div class="comments-list">
+                       <div class="media">
+                         <div class="pull-right">
+                             <span class="label label-info">+10 xp</span>
+                         </div>
+                            <a class="media-left" href="#">
+                              <img class="comment-img" src="assets/img/placeholder-user.png">
+                            </a>
+                            <div class="media-body">
+
+                              <h4 class="media-heading user_name">James Neal</h4>
+                              Thanks for the git help!
+
+                              <!-- <p><small><a href="">Like</a> - <a href="">Share</a></small></p> -->
+                            </div>
+                          </div>
+                       <div class="media">
+                         <div class="pull-right">
+                             <span class="label label-info">+10 xp</span>
+                         </div>
+                            <a class="media-left" href="#">
+                              <img class="comment-img" src="assets/img/placeholder-user.png">
+                            </a>
+                            <div class="media-body">
+
+                              <h4 class="media-heading user_name">Steve Tsang</h4>
+                              Git help
+
+                              <!-- <p><small><a href="">Like</a> - <a href="">Share</a></small></p> -->
+                            </div>
+                          </div>
+                       <div class="media">
+                         <div class="pull-right">
+                             <span class="label label-info">+10 xp</span>
+                         </div>
+                           <!-- <p class="pull-right"><small>5 days ago</small></p> -->
+                            <a class="media-left" href="#">
+                              <img class="comment-img" src="assets/img/placeholder-user.png">
+                            </a>
+                            <div class="media-body">
+
+                              <h4 class="media-heading user_name">Reiss Jarvis</h4>
+                              git training
+
+                              <!-- <p><small><a href="">Like</a> - <a href="">Share</a></small></p> -->
+                            </div>
+                          </div>
+                       <div class="media">
+                         <div class="pull-right">
+                             <span class="label label-info">+10 xp</span>
+                         </div>
+                            <a class="media-left" href="#">
+                              <img class="comment-img" src="assets/img/placeholder-user.png">
+                            </a>
+                            <div class="media-body">
+
+                              <h4 class="media-heading user_name">Kevin Lee</h4>
+                              training site
+
+                              <!-- <p><small><a href="">Like</a> - <a href="">Share</a></small></p> -->
+                            </div>
+                          </div>
+                          <hr />
+                   </div>
+
+  <!-- <div>
+    <ul class="list-group">
+      <li class="list-group-item">
+        <img class="profile-img" width="40px" height="40px" src="assets/img/placeholder-user.png" />
+        <span><strong>James Neal: </strong></span>
+        Thanks for helping me with the git stuff! :D
+
+        <div>
+            <span class="label label-info">+10 xp</span>
+        </div>
+      </li>
+      <li class="list-group-item">
+        <img class="profile-img" width="40px" height="40px" src="assets/img/placeholder-user.png" />
+        <span><strong>Steve Tsang: </strong></span>
+        Git help
+
+        <div>
+            <span class="label label-info">+10 xp</span>
+        </div>
+      </li>
+    </ul>
+  </div> -->
 </div>
