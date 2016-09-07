@@ -22,14 +22,14 @@
   height: 100px;
 }
 
-.user_name{
+.user_name {
     font-size:14px;
     font-weight: bold;
     color: rgb(102, 189, 221);
 }
 
 .comments-list .media{
-    /*border-bottom: 1px solid #ccc;*/
+    border-bottom: 1px solid #ccc;
     height: 60px;
 }
 

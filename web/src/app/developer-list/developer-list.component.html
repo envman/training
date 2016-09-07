@@ -1,7 +1,9 @@
-<ul class="list-group">
+<ul class="list-group col-md-offset-2 col-lg-offset-2 col-md-8 col-lg-8">
   <li class="list-group-item dev-row" *ngFor='let dev of developers'>
     <div class="col-md-2 col-lg-2">
+      <a (click)='click(dev)'>
         <img class="profile-img" width="100px" height="100px" src="assets/img/placeholder-user.png" />
+        </a>
     </div>
 
     <a (click)='click(dev)'>{{dev.name}}</a>

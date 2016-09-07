@@ -12,5 +12,4 @@ export class CourseDetailComponent {
 
   ngOnInit() {
   }
-
 }
