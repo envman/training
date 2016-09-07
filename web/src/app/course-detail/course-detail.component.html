@@ -1,3 +1,32 @@
-<p>
-  course-detail works!
-</p>
+<div class='well col-md-8 col-lg-8 col-md-offset-2 col-lg-offset-2' *ngIf='course'>
+  <!-- <center> -->
+    <!-- <div class="col-md-2 col-lg-2" > -->
+      <!-- <img class="profile-img" width="140px" height="140px" src="assets/img/placeholder-user.png" />
+      <div class="rank-label-container">
+          <span class="label label-default rank-label">1200 xp</span>
+      </div> -->
+    <!-- </div> -->
+
+    <div class="" >
+      <h3 class="media-heading">{{course.name}} <small>({{course.time}})</small></h3>
+      <span><small>{{course.author}}</small></span>
+    </div>
+
+    <hr />
+    <div>
+      <span><strong>You will learn: </strong></span>
+      <div *ngFor='let skill of course.skills'>
+          <div class="label label-warning">{{skill}}</div>
+      </div>
+    </div>
+
+    <hr />
+
+    <div>
+      <span><strong>XP: </strong></span>
+      <span class="label label-success">{{course.xp}}</span>
+    </div>
+  <hr>
+
+  <button class="btn btn-primary">Register for session</button>
+</div>

@@ -10,7 +10,12 @@ export class CourseService {
 
   courseList() {
     return this.authHttp.get('http://localhost:4301/course/list')
-      .map(this.convertData)
+      .map(r => r.json())
+  }
+
+  course(id) {
+    return this.authHttp.get('http://localhost:4301/course/' + id)
+      .map(r => r.json())
   }
 
   addCourse(name, author, description) {
@@ -20,10 +25,5 @@ export class CourseService {
     let options = new RequestOptions({ headers: headers });
 
     return this.authHttp.post(url, data, options)
-  }
-
-  convertData(res: Response) {
-    let body = res.json()
-    return body || { }
   }
 }

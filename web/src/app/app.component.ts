@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component } from '@angular/core'
 import { CourseListComponent } from './course-list'
 import { ROUTER_DIRECTIVES, Router } from '@angular/router'
 import { MenuComponent } from './menu/menu.component'
@@ -8,6 +8,7 @@ import { DeveloperService } from './developer/developer.service'
 import { DeveloperListComponent } from './developer-list/developer-list.component'
 import { DeveloperComponent } from './developer/developer.component'
 import { AdminComponent } from './admin/admin.component'
+import { CourseDetailComponent } from './course-detail/course-detail.component'
 
 @Component({
   moduleId: module.id,
@@ -16,7 +17,7 @@ import { AdminComponent } from './admin/admin.component'
   styleUrls: ['app.component.css'],
   providers: [DeveloperService],
   directives: [ROUTER_DIRECTIVES, MenuComponent],
-  precompile: [CourseListComponent, DeveloperListComponent, DeveloperComponent, AdminComponent]
+  precompile: [CourseListComponent, DeveloperListComponent, DeveloperComponent, AdminComponent, CourseDetailComponent]
 })
 export class AppComponent {
 
