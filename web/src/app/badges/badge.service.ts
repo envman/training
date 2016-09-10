@@ -9,7 +9,7 @@ export class BadgeService {
   constructor(private authHttp: AuthHttp) {  }
 
   badgeList(id) {
-    return this.authHttp.get('http://localhost:4302/badges/' + id)
+    return this.authHttp.get('http://localhost:4300/badge/' + id)
       .map(this.convertData)
   }
 
