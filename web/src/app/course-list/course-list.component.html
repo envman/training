@@ -1,10 +1,10 @@
 <ul class="list-group  col-md-offset-2 col-lg-offset-2 col-md-8 col-lg-8">
   <li class="list-group-item" *ngFor="let course of courses" (click)="click(course)">
     <a (click)='click(course)'>
-      <h3>{{course.name}} - {{course.author}}</h3>
+      <h4>{{course.name}} - {{course.author}}</h4>
+      </a>
       <div>
         {{course.description}}
       </div>
-    </a>
   </li>
 <ul>
