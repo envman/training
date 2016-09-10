@@ -18,9 +18,9 @@ export class CourseService {
       .map(r => r.json())
   }
 
-  addCourse(name, author, description) {
+  addCourse(name, author, description, xp, time, skills) {
     let url = 'http://localhost:4300/course/add'
-    let data = JSON.stringify({name: name, author: author, description: description})
+    let data = JSON.stringify({name: name, author: author, description: description, xp: xp, time: time, skills: skills})
     let headers = new Headers({ 'Content-Type': 'application/json' })
     let options = new RequestOptions({ headers: headers });
 

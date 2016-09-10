@@ -1,22 +1,46 @@
-<div class="form-group">
-  <label for="name" class="col-md-3 control-label">Course Name</label>
-  <div class="col-md-9">
-    <input type="text" class="form-control" id="name" [(ngModel)]='name' name="name" />
+<div class="col-md-offset-2 col-lg-offset-2 col-md-8 col-lg-8">
+  <div class="form-group">
+    <label for="name" class="col-md-3 control-label">Course Name</label>
+    <div class="col-md-9">
+      <input type="text" class="form-control" id="name" [(ngModel)]='name' name="name" />
+    </div>
   </div>
-</div>
 
-<div class="form-group">
-  <label for="author" class="col-md-3 control-label">Author</label>
-  <div class="col-md-9">
-    <input type="text" class="form-control" id="author" [(ngModel)]='author' name="author" />
+  <div class="form-group">
+    <label for="author" class="col-md-3 control-label">Author</label>
+    <div class="col-md-9">
+      <input type="text" class="form-control" id="author" [(ngModel)]='author' name="author" />
+    </div>
   </div>
-</div>
 
-<div class="form-group">
-  <label for="description" class="col-md-3 control-label">Description</label>
-  <div class="col-md-9">
-    <input type="text" class="form-control" id="description" [(ngModel)]='description' name="description" />
+  <div class="form-group">
+    <label for="description" class="col-md-3 control-label">Description</label>
+    <div class="col-md-9">
+      <input type="text" class="form-control" id="description" [(ngModel)]='description' name="description" />
+    </div>
   </div>
-</div>
 
-<button class='btn btn-primary' (click)='addCourse()'>Add Course</button>
+  <div class="form-group">
+    <label for="xp" class="col-md-3 control-label">XP</label>
+    <div class="col-md-9">
+      <input type="text" class="form-control" id="xp" [(ngModel)]='xp' name="xp" />
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label for="time" class="col-md-3 control-label">Time</label>
+    <div class="col-md-9">
+      <input type="text" class="form-control" id="time" [(ngModel)]='time' name="time" />
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label for="learn" class="col-md-3 control-label">You will learn (, seperated)</label>
+    <div class="col-md-9">
+      <input type="text" class="form-control" id="learn" [(ngModel)]='learn' name="learn" />
+    </div>
+  </div>
+
+  <button class='btn btn-primary' (click)='addCourse()'>Add Course</button>
+
+</div>

@@ -12,13 +12,21 @@ export class AdminComponent {
   name: string = ''
   author: string = ''
   description: string = ''
+  xp: number = 0
+  time: string = ''
+  learn: string = ''
 
   addCourse() {
-    this.courseService.addCourse(this.name, this.author, this.description)
+    var items = this.learn.split(',')
+
+    this.courseService.addCourse(this.name, this.author, this.description, this.xp, this.time, items)
       .subscribe(r => {
         this.name = ''
         this.author = ''
         this.description = ''
+        this.xp = 0
+        this.time = ''
+        this.learn = ''
       })
   }
 }

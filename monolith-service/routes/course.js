@@ -1,4 +1,5 @@
 var router = require('express').Router()
+var shortid = require('shortid')
 
 let courses = [
   {
